@@ -1,31 +1,20 @@
+  import React from "react";
+  import ReactDOM from "react-dom/client"
 
-// #region Basic React from JS
-// const heading = React.createElement(
-//     "h1",
-//     {id: "heading"},
-//     "Hello! Welcome to react from App.js"
-// )
+  // React.createElement => Object => HTMLElement(render)
 
-// const root = ReactDOM.createRoot(document.getElementById("root"));
-// root.render(heading);
+  const heading = React.createElement("h1", {id : "heading"}, "Namaste React");
+  const root = ReactDOM.createRoot(document.getElementById("root"));
+  root.render(heading);
 
-/* <div id="parent">
-    <div id= "child">
-        <h1>I am in h1 tag</h1>
-        <h2>I am in h1 tag</h2>
-    </div>
-</div> */
 
-const parent = React.createElement(
-    "div",
-    { id: "parent" },
-    React.createElement(
-        "div",
-        { id: "child" },
-        [React.createElement("h1",{}, "I am in h1 tag"), React.createElement("h2", {}, "I am in h2 tag")]
-    )
-);
+  //  JSX is not HTML in JS.
+  // JSX(transpiled )
+  const jsxHeading = <h1 className="head">Namaste React using JSX</h1>
+  console.log(jsxHeading);
+  root.render(jsxHeading);
 
-const root = ReactDOM.createRoot(document.getElementById("root"));
-
-root.render(parent);
+  // If we want to write code in multiple lines it should be under () brackets.
+  /* Eg: const jsxHeading2 = (<h1 className="head">
+    Namaste React Example
+    </h1>) */

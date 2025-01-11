@@ -1,0 +1,24 @@
+{
+  "name": "namastereact",
+  "version": "1.0.0",
+  "description": "Full course on React",
+  "scripts": {
+    "start": "parcel index.html",
+    "build": "parcel build index.html",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/malikankit392/NamasteReact.git"
+  },
+  "author": "Ankit Malik",
+  "license": "ISC",
+  "dependencies": {
+    "parcel": "^2.13.3",
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0"
+  },
+  "devDependencies": {
+    "process": "^0.11.10"
+  }
+}
