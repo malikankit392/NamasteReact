@@ -18,3 +18,25 @@
   /* Eg: const jsxHeading2 = (<h1 className="head">
     Namaste React Example
     </h1>) */
+
+  // React Components
+  // React Functional Components
+
+  const Title = () => (
+    <h1 className = "heading" tabIndex = "5">
+        Namaste react using JSX
+    </h1>
+  )
+
+  const number = 10000;
+  const HeadingComponent = () => (
+    <div id="container">
+      <h2 id="heading">{number}</h2>
+      <Title/>
+      <h1 id="heading">Namaste React Functional Component</h1>
+    </div> 
+  )
+
+  // using curly braces {} we can write JS code in the JSX like {number}
+
+  root.render(<HeadingComponent/>)
