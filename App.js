@@ -38,5 +38,7 @@
   )
 
   // using curly braces {} we can write JS code in the JSX like {number}
-
+  // <h2 id="heading">{number}</h2>  /* We can add js code inside jsx */
+  
   root.render(<HeadingComponent/>)
+
