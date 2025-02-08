@@ -1,35 +1,4 @@
-import React from "react";
-import ReactDOM from "react-dom/client"
-  
-const AppLayout = () => {
-    return (
-        <div className="pop">
-            <Header/>
-            <Body/>
-        </div>
-    )
-}
-
-const Header = () => {
-    return (
-        <div className="header">
-            <div className="logo-container">
-                <img className ="logo" src = "https://cdn-icons-png.flaticon.com/256/10750/10750601.png" />
-            </div>
-
-            <div className="nav-items">
-                <ul>
-                    <li>Home</li>
-                    <li>About Us</li>
-                    <li>Contact Us</li>
-                    <li>Cart</li>
-                </ul>
-            </div>
-        </div> 
-    )
-}
-
-const resList= [
+const restList= [
     {
     "info": {
     "id": "43909",
@@ -41,7 +10,7 @@ const resList= [
     "cuisines": [
     "Pizzas"
     ],
-    "avgRating": 4.1,
+    "avgRating": 3.5,
     "parentId": "721",
     "avgRatingString": "4.1",
     "totalRatingsString": "2.9K+",
@@ -192,7 +161,7 @@ const resList= [
     "Burgers",
     "American"
     ],
-    "avgRating": 4.1,
+    "avgRating": 3.8,
     "parentId": "166",
     "avgRatingString": "4.1",
     "totalRatingsString": "41K+",
@@ -276,7 +245,7 @@ const resList= [
     "Indian",
     "American"
     ],
-    "avgRating": 4.4,
+    "avgRating": 3.1,
     "parentId": "1607",
     "avgRatingString": "4.4",
     "totalRatingsString": "7.6K+",
@@ -471,7 +440,7 @@ const resList= [
     "Ice Cream",
     "Desserts"
     ],
-    "avgRating": 4.8,
+    "avgRating": 3.8,
     "veg": true,
     "parentId": "2093",
     "avgRatingString": "4.8",
@@ -763,57 +732,6 @@ const resList= [
     },
     "widgetId": "collectionV5RestaurantListWidget_SimRestoRelevance_food_seo"
     }
-    ]
+    ];
 
-const RestaurantCard = (props) => {
-    const { resData } = props;
-    const { cloudinaryImageId, name, cuisines, avgRating, sla} = resData?.info;
-
-    return (
-        <div className= "res-card" style = {{backgroundColor: "#D3D3D3"}}>
-            <img className= "res-logo" alt-text="Meghna Foods" 
-                src = { "https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_660/" + 
-                cloudinaryImageId }/>
-            <h3>{name}</h3>
-            <h4>{cuisines.join(", ")}</h4>
-            <h4>{avgRating} stars</h4>
-            <h4>{sla.slaString}</h4>
-        </div>
-    )
-}
-
-const Body = () => {
-    return (
-        <div className ="body"> 
-            <div className ="search">Search</div>
-            <div className = "res-container">
-                { resList.map(rest => <RestaurantCard key = {rest.info.id} resData = {rest}/>)}
-            </div> 
-        </div>
-    )
-} 
-
-const root = ReactDOM.createRoot(document.getElementById("root"));
- 
-root.render(<AppLayout/>)
-
-
-/* Components that our Application will have
-*   Header
-    - Logo 
-    - Nav Items
-*   Body
-    - Search bar
-    - RestaurantContainer
-        - RestaurantCard
-            -   Img
-            -   Name of Restaurant
-            -   Star Rating
-            -   Cuisine
-            -   Delivery Time
-*   Footer
-    - Copyright
-    - Links
-    - Address
-    - Contact
-*/
+    export default restList;

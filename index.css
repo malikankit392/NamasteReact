@@ -43,11 +43,12 @@
     cursor: pointer;
 }
 
-.search {
-    padding: 10px;
-}
-
 .res-logo {
     width: 100%;
     height: 50%;
+}
+
+.filter-btn {
+    margin: 10px;
+    cursor: pointer;
 }
